@@ -30,53 +30,41 @@ public class Main {
 
         ContainerManager containerManager;
 
-        Container container1;
-        Container container2;
-        Container container3;
-        Container container4;
-        Container container5;
-        Container container6;
-        Container container7;
-        Container container8;
-        Container container9;
-        Container container10;
-
-
         List<Container> containersList = new ArrayList<Container>();
 
 
         containerBuilder = new ContainerBuilder();
-        container1 = containerBuilder.build(StraightContainerBase.SQUARE, kerosene);
-        containersList.add(container1);
+        Container squareWithKeroseneCnt = containerBuilder.build(StraightContainerBase.SQUARE, kerosene);
+        containersList.add(squareWithKeroseneCnt);
 
         containerManager = new ContainerManager();
 
-        container2 = containerBuilder.build(InclinedContainerBase.SQUARE, InclinedContainerBase.TRAPEZOID, oil);
-        containersList.add(container2);
+        Container squareTrapOilCnt = containerBuilder.build(InclinedContainerBase.SQUARE, InclinedContainerBase.TRAPEZOID, oil);
+        containersList.add(squareTrapOilCnt);
 
-        container3 = containerBuilder.build(StraightContainerBase.CIRCLE, machineOil);
-        containersList.add(container3);
+        Container circleMchnOilCnt = containerBuilder.build(StraightContainerBase.CIRCLE, machineOil);
+        containersList.add(circleMchnOilCnt);
 
-        container4 = containerBuilder.build(InclinedContainerBase.TRAPEZOID,InclinedContainerBase.SQUARE, kerosene);
-        containersList.add(container4);
+        Container trapSquareKeroseneCnt = containerBuilder.build(InclinedContainerBase.TRAPEZOID,InclinedContainerBase.SQUARE, kerosene);
+        containersList.add(trapSquareKeroseneCnt);
 
-        container5 = containerBuilder.build(StraightContainerBase.CIRCLE, machineOil);
-        containersList.add(container5);
+        Container ellipseMchnOilCnt = containerBuilder.build(StraightContainerBase.ELLIPSE, machineOil);
+        containersList.add(ellipseMchnOilCnt);
 
-        container6 = containerBuilder.build(InclinedContainerBase.CIRCLE,InclinedContainerBase.HEXAGON, oil);
-        containersList.add(container6);
+        Container circleHexagonOilCnt = containerBuilder.build(InclinedContainerBase.CIRCLE,InclinedContainerBase.HEXAGON, oil);
+        containersList.add(circleHexagonOilCnt);
 
-        container7 = containerBuilder.build(StraightContainerBase.HEXAGON, kerosene);
-        containersList.add(container7);
+        Container hexagonKeroseneCnt = containerBuilder.build(StraightContainerBase.HEXAGON, kerosene);
+        containersList.add(hexagonKeroseneCnt);
 
-        container8 = containerBuilder.build(InclinedContainerBase.HEXAGON, InclinedContainerBase.SQUARE, kerosene);
-        containersList.add(container8);
+        Container hexagonSquareKeroseneCnt = containerBuilder.build(InclinedContainerBase.HEXAGON, InclinedContainerBase.SQUARE, kerosene);
+        containersList.add(hexagonSquareKeroseneCnt);
 
-        container9 = containerBuilder.build(StraightContainerBase.ELLIPSE, machineOil);
-        containersList.add(container9);
+        Container rectangleMchnOilCnt = containerBuilder.build(StraightContainerBase.RECTANGLE, machineOil);
+        containersList.add(rectangleMchnOilCnt);
 
-        container10 = containerBuilder.build(InclinedContainerBase.TRAPEZOID, InclinedContainerBase.HEXAGON, kerosene);
-        containersList.add(container10);
+        Container trapHexagonKeroseneCnt = containerBuilder.build(InclinedContainerBase.TRAPEZOID, InclinedContainerBase.HEXAGON, kerosene);
+        containersList.add(trapHexagonKeroseneCnt);
 
         containerManager.sortContainersByMass(containersList);
         containerManager.findMaxKeroseneMass(containersList);
